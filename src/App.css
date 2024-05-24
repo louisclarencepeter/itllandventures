@@ -1,9 +1,23 @@
 .App {
   text-align: center;
-  width: 100%;
-  max-width: 100vw;
   margin: 0 auto;
+  min-height: 100vh; /* Ensure it takes full height */
 }
+
+.App-header {
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(14px + 2vmin);
+  color: #282c34;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
 
 .App-logo {
   height: 30vmin;
@@ -19,20 +33,6 @@
   100% {
     opacity: 1;
   }
-}
-
-.App-header {
-  background-color: white;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(14px + 2vmin);
-  color: #282c34;
-  padding: 20px;
-  box-sizing: border-box;
-  text-align: center;
 }
 
 p {
@@ -93,6 +93,7 @@ p {
   opacity: 1;
 }
 
+/* Responsive styles for smaller screens */
 @media (max-width: 600px) {
   .App-header {
     font-size: calc(12px + 2vmin);
@@ -107,5 +108,31 @@ p {
   .social-links span {
     font-size: 12px;
     margin-top: 5px;
+  }
+}
+
+/* Styles for full HD screens */
+@media (min-width: 1920px) {
+  .App-header {
+    font-size: calc(18px + 2vmin);
+    padding: 40px;
+  }
+
+  .social-links {
+    margin-top: 30px;
+  }
+
+  .social-links li {
+    margin: 20px;
+    flex-basis: 20%;
+  }
+
+  .social-links a {
+    font-size: 24px;
+  }
+
+  .social-links span {
+    font-size: 18px;
+    margin-top: 12px;
   }
 }
