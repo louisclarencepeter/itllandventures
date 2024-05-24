@@ -28,10 +28,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(16px + 2vmin);
+  font-size: calc(14px + 2vmin);
   color: #282c34;
   padding: 20px;
   box-sizing: border-box;
+  text-align: center;
 }
 
 p {
@@ -57,10 +58,13 @@ p {
   padding: 0;
   list-style: none;
   flex-wrap: wrap;
+  max-width: 100%;
 }
 
 .social-links li {
   margin: 10px;
+  flex-basis: 33.33%;
+  text-align: center;
 }
 
 .social-links a {
@@ -90,8 +94,14 @@ p {
 }
 
 @media (max-width: 600px) {
+  .App-header {
+    font-size: calc(12px + 2vmin);
+    padding: 10px;
+  }
+
   .social-links li {
     margin: 5px;
+    flex-basis: 50%;
   }
 
   .social-links span {
