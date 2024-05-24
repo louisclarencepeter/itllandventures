@@ -17,15 +17,15 @@ function App() {
           </a>
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faFacebook} size="2x" />
-            <span>Like us on Facebook</span>
+            <span>Like our Facebook page</span>
           </a>
           <a href="https://wa.me" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faWhatsapp} size="2x" />
-            <span>Chat with us on WhatsApp</span>
+            <span>Message us on WhatsApp</span>
           </a>
           <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faYoutube} size="2x" />
-            <span>Subscribe to our YouTube channel</span>
+            <span>Watch our YouTube videos</span>
           </a>
           <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faTwitter} size="2x" />
