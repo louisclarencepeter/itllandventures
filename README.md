@@ -60,7 +60,7 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 
 ## Contact
 
-For any inquiries, please contact us at info@itl-land-ventures.com.
+For any inquiries, please contact us at info@itllandventures.com.
 
 ---
 
