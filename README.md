@@ -18,7 +18,7 @@ To run this project locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/itl-land-ventures.git
+   git clone https://github.com/your-username/itllandventures.git
    cd itl-land-ventures
    ```
 
@@ -62,7 +62,7 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 
 ## Contact
 
-For any inquiries, please contact us at info@itl-land-ventures.com.
+For any inquiries, please contact us at info@itllandventures.com.
 
 ---
 
