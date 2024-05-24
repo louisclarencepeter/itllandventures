@@ -13,23 +13,23 @@ function App() {
         <div className="social-links">
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faInstagram} size="2x" />
-            <span className="sr-only">Instagram</span>
+            <span>Follow us on Instagram</span>
           </a>
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faFacebook} size="2x" />
-            <span className="sr-only">Facebook</span>
+            <span>Like us on Facebook</span>
           </a>
           <a href="https://wa.me" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faWhatsapp} size="2x" />
-            <span className="sr-only">WhatsApp</span>
+            <span>Chat with us on WhatsApp</span>
           </a>
           <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faYoutube} size="2x" />
-            <span className="sr-only">YouTube</span>
+            <span>Subscribe to our YouTube channel</span>
           </a>
           <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faTwitter} size="2x" />
-            <span className="sr-only">Twitter</span>
+            <span>Follow us on Twitter</span>
           </a>
         </div>
       </header>
