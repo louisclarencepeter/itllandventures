@@ -1,13 +1,12 @@
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faFacebook, faWhatsapp, faYoutube, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import logo from './assets/logo.png';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" width="200" height="200" />
+        <img src="/logo.png" className="App-logo" alt="logo" width="200" height="200" />
         <h1>ITL Land Ventures</h1>
         <p>Our website is currently under development. Stay connected with us through our social media channels!</p>
         <div className="social-links">
