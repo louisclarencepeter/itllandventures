@@ -1,9 +1,33 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faFacebook, faWhatsapp, faYoutube, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import SunCalc from 'suncalc';
 import './App.css';
 
 function App() {
+  const [isNightMode, setIsNightMode] = useState(false);
+
+  useEffect(() => {
+    const checkNightMode = () => {
+      if ('geolocation' in navigator) {
+        navigator.geolocation.getCurrentPosition(position => {
+          const { latitude, longitude } = position.coords;
+          const now = new Date();
+          const sunsetTime = SunCalc.getTimes(now, latitude, longitude).sunset;
+
+          setIsNightMode(now > sunsetTime);
+        });
+      }
+    };
+
+    checkNightMode();
+    const intervalId = setInterval(checkNightMode, 60000); // Check every minute
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
+
   useEffect(() => {
     const initializeCMP = async () => {
       if (window.UC_UI) {
@@ -25,7 +49,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <header className={`App-header ${isNightMode ? 'night-mode' : ''}`}>
         <img src="/logo.png" className="App-logo" alt="logo" width="200" height="200" />
         <h1>ITL Land Ventures</h1>
         <p>Our website is currently under development. Stay connected with us through our social media channels!</p>

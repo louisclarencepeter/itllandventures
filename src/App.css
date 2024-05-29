@@ -16,8 +16,21 @@
   padding: 20px;
   box-sizing: border-box;
   text-align: center;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
+.App-header.night-mode {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.App-header.night-mode a {
+  color: #ffffff;
+}
+
+.App-header.night-mode a:hover {
+  color: #d4af37;
+}
 
 .App-logo {
   height: 30vmin;
