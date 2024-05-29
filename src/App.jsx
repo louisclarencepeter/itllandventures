@@ -1,8 +1,28 @@
-import './App.css';
+import { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faFacebook, faWhatsapp, faYoutube, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import './App.css';
 
 function App() {
+  useEffect(() => {
+    const initializeCMP = async () => {
+      if (window.UC_UI) {
+        await window.UC_UI.initialize();
+      } else {
+        const script = document.getElementById('usercentrics-cmp');
+        if (script) {
+          script.onload = async () => {
+            if (window.UC_UI) {
+              await window.UC_UI.initialize();
+            }
+          };
+        }
+      }
+    };
+
+    initializeCMP();
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
