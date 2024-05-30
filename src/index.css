@@ -86,8 +86,19 @@ button:focus-visible {
 }
 
 @media screen and (max-width: 767px) {
-  .chatbase-embed-iframe .chatbase-iframe {
-    width: 44px !important;
-    height: 44px !important;
+  .iNnoSk {
+    width: 44px;
+    height: 44px;
+    bottom: 20px;
+    left: 20px;
+  }
+  
+  .cNkVwm {
+    padding: 8px;
+  }
+  
+  .cNkVwm svg {
+    width: 28px;
+    height: 28px;
   }
 }
