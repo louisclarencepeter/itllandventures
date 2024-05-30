@@ -21,7 +21,7 @@ function App() {
     };
 
     checkNightMode();
-    const intervalId = setInterval(checkNightMode, 60000); // Check every minute
+    const intervalId = setInterval(checkNightMode, 60000);
 
     return () => {
       clearInterval(intervalId);
@@ -57,14 +57,28 @@ function App() {
       chatbotId: "_uKBoYS6yXAh9HztcRRrK",
       domain: "www.chatbase.co",
       config: {
-        iconWidth: 64,  // Use the desktop size from your settings
-        iconHeight: 64,
-        iconBackground: '#0045A5',  // Background color from your settings
-        position: 'right',  // Ensure the chat bubble is on the right side
+        iconWidth: 40,  // Set icon width to 40px to accommodate the border
+        iconHeight: 40,  // Set icon height to 40px to accommodate the border
+        iconBackground: '#282c34',
+        iconBorderRadius: '50%',
+        iconBorderColor: '#FF0000',
+        iconBorderWidth: '2px',
+        position: 'bottom-left',
+        iconMargin: {
+          right: '10px',  // Add margin from the right side
+          bottom: '10px'  // Add margin from the bottom
+        },
         mobile: {
-          iconWidth: 44,  // Mobile size from your settings
-          iconHeight: 44,
-          iconBackground: '#0045A5'
+          iconWidth: 40,
+          iconHeight: 40,
+          iconBackground: '#282c34',
+          iconBorderRadius: '50%',
+          iconBorderColor: '#FF0000',
+          iconBorderWidth: '2px',
+          iconMargin: {
+            right: '10px',  // Add margin from the right side
+            bottom: '10px'  // Add margin from the bottom
+          }
         }
       }
     };
