@@ -84,3 +84,10 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .chatbase-embed-iframe .chatbase-iframe {
+    width: 44px !important;
+    height: 44px !important;
+  }
+}
