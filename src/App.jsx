@@ -59,8 +59,8 @@ function App() {
             iconBorderWidth: '2px',
             position: 'bottom-left',
             iconMargin: {
-              right: '15px',
-              bottom: '15px'
+              right: '20px',
+              bottom: '20px'
             },
             mobile: {
               iconWidth: 40,
@@ -70,8 +70,8 @@ function App() {
               iconBorderColor: '#FF0000',
               iconBorderWidth: '2px',
               iconMargin: {
-                right: '15px',
-                bottom: '15px'
+                right: '20px',
+                bottom: '20px'
               }
             }
           }
