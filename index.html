@@ -21,6 +21,15 @@
       gtag('js', new Date());
       gtag('config', 'G-G2MGF6PFST');
     </script>
+
+    <style>
+      @media screen and (max-width: 767px) {
+        #chatbase-iframe {
+          width: 44px !important;
+          height: 44px !important;
+        }
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
@@ -30,7 +39,11 @@
     <script>
       window.embeddedChatbotConfig = {
         chatbotId: "_uKBoYS6yXAh9HztcRRrK",
-        domain: "www.chatbase.co"
+        domain: "www.chatbase.co",
+        config: {
+          iconWidth: 64,
+          iconHeight: 64
+        }
       };
     </script>
     <script
