@@ -1,11 +1,13 @@
-const CACHE_NAME = 'my-cache-v1';
+const CACHE_NAME = 'itl-land-ventures-cache-v1';
 const urlsToCache = [
   '/',
   '/index.html',
   '/manifest.json',
-  '/logo192.png',
-  '/logo512.png',
-  // Add more assets to cache during installation
+  '/logo.png',
+  '/src/App.css',
+  '/src/index.css',
+  '/src/App.jsx',
+  '/src/main.jsx',
 ];
 
 self.addEventListener('install', function(event) {

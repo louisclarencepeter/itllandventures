@@ -1,30 +1,23 @@
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faFacebook, faWhatsapp, faYoutube, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import SunCalc from 'suncalc';
 import './App.css';
 
 function App() {
   const [isNightMode, setIsNightMode] = useState(false);
 
   useEffect(() => {
-    const checkNightMode = () => {
-      if ('geolocation' in navigator) {
-        navigator.geolocation.getCurrentPosition(position => {
-          const { latitude, longitude } = position.coords;
-          const now = new Date();
-          const sunsetTime = SunCalc.getTimes(now, latitude, longitude).sunset;
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    setIsNightMode(mediaQuery.matches);
 
-          setIsNightMode(now > sunsetTime);
-        });
-      }
+    const handleChange = (e) => {
+      setIsNightMode(e.matches);
     };
 
-    checkNightMode();
-    const intervalId = setInterval(checkNightMode, 60000);
+    mediaQuery.addEventListener('change', handleChange);
 
     return () => {
-      clearInterval(intervalId);
+      mediaQuery.removeEventListener('change', handleChange);
     };
   }, []);
 
@@ -44,44 +37,50 @@ function App() {
       }
     };
 
-    initializeCMP();
-
-    const script = document.createElement('script');
-    script.src = "https://www.chatbase.co/embed.min.js";
-    script.setAttribute('chatbotId', '_uKBoYS6yXAh9HztcRRrK');
-    script.setAttribute('domain', 'www.chatbase.co');
-    script.defer = true;
-    document.body.appendChild(script);
-
-    window.embeddedChatbotConfig = {
-      chatbotId: "_uKBoYS6yXAh9HztcRRrK",
-      domain: "www.chatbase.co",
-      config: {
-        iconWidth: 40,  // Set icon width to 40px to accommodate the border
-        iconHeight: 40,  // Set icon height to 40px to accommodate the border
-        iconBackground: '#282c34',
-        iconBorderRadius: '50%',
-        iconBorderColor: '#FF0000',
-        iconBorderWidth: '2px',
-        position: 'bottom-left',
-        iconMargin: {
-          right: '10px',  // Add margin from the right side
-          bottom: '10px'  // Add margin from the bottom
-        },
-        mobile: {
-          iconWidth: 40,
-          iconHeight: 40,
-          iconBackground: '#282c34',
-          iconBorderRadius: '50%',
-          iconBorderColor: '#FF0000',
-          iconBorderWidth: '2px',
-          iconMargin: {
-            right: '10px',  // Add margin from the right side
-            bottom: '10px'  // Add margin from the bottom
+    const initializeChatbase = () => {
+      (function() {
+        const script = document.createElement('script');
+        script.src = "https://www.chatbase.co/embed.min.js";
+        script.setAttribute('chatbotId', '_uKBoYS6yXAh9HztcRRrK');
+        script.setAttribute('domain', 'www.chatbase.co');
+        script.setAttribute('data-namespace', 'chatbase');
+        script.async = true;
+        document.body.appendChild(script);
+    
+        window.embeddedChatbotConfig = {
+          chatbotId: "_uKBoYS6yXAh9HztcRRrK",
+          domain: "www.chatbase.co",
+          config: {
+            iconWidth: 40,
+            iconHeight: 40,
+            iconBackground: '#282c34',
+            iconBorderRadius: '50%',
+            iconBorderColor: '#FF0000',
+            iconBorderWidth: '2px',
+            position: 'bottom-left',
+            iconMargin: {
+              right: '10px',
+              bottom: '10px'
+            },
+            mobile: {
+              iconWidth: 40,
+              iconHeight: 40,
+              iconBackground: '#282c34',
+              iconBorderRadius: '50%',
+              iconBorderColor: '#FF0000',
+              iconBorderWidth: '2px',
+              iconMargin: {
+                right: '10px',
+                bottom: '10px'
+              }
+            }
           }
-        }
-      }
+        };
+      })();
     };
+
+    initializeCMP();
+    initializeChatbase();
   }, []);
 
   return (
