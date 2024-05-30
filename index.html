@@ -27,25 +27,15 @@
     <link rel="stylesheet" href="index.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Chatbot iframe -->
+      <iframe
+        src="https://www.chatbase.co/chatbot-iframe/_uKBoYS6yXAh9HztcRRrK"
+        title="Chatbot"
+        class="chatbot-iframe"
+        frameborder="0"
+      ></iframe>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
-
-    <!-- Chatbase Embedding Script -->
-    <script>
-      window.embeddedChatbotConfig = {
-        chatbotId: "_uKBoYS6yXAh9HztcRRrK",
-        domain: "www.chatbase.co",
-        config: {
-          iconWidth: 64,
-          iconHeight: 64
-        }
-      };
-    </script>
-    <script
-      src="https://www.chatbase.co/embed.min.js"
-      chatbotId="_uKBoYS6yXAh9HztcRRrK"
-      domain="www.chatbase.co"
-      defer
-    ></script>
   </body>
 </html>
