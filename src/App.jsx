@@ -38,7 +38,11 @@ function App() {
     };
 
     const initializeChatbase = () => {
-      (function() {
+      // Check if the script has already been loaded
+      const existingScript = document.querySelector('script[src="https://www.chatbase.co/embed.min.js"]');
+
+      if (!existingScript) {
+        // Script hasn't been loaded yet, so create a new one
         const script = document.createElement('script');
         script.src = "https://www.chatbase.co/embed.min.js";
         script.setAttribute('chatbotId', '_uKBoYS6yXAh9HztcRRrK');
@@ -46,7 +50,7 @@ function App() {
         script.setAttribute('data-namespace', 'chatbase');
         script.async = true;
         document.body.appendChild(script);
-    
+
         window.embeddedChatbotConfig = {
           chatbotId: "_uKBoYS6yXAh9HztcRRrK",
           domain: "www.chatbase.co",
@@ -76,7 +80,7 @@ function App() {
             }
           }
         };
-      })();
+      }
     };
 
     initializeCMP();
