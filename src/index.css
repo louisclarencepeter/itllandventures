@@ -102,3 +102,20 @@ button:focus-visible {
     height: 20px;
   }
 }
+
+/* Custom Chatbot Icon Styles */
+.chatbot-icon {
+  width: 64px !important;
+  height: 64px !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  background-color: #123456 !important;
+  border-radius: 50% !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+.chatbot-icon svg {
+  width: 32px !important;
+  height: 32px !important;
+  fill: #ffffff !important;
+}
