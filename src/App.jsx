@@ -51,16 +51,16 @@ function App() {
           chatbotId: "_uKBoYS6yXAh9HztcRRrK",
           domain: "www.chatbase.co",
           config: {
-            iconWidth: 40,
-            iconHeight: 40,
+            iconWidth: 35,
+            iconHeight: 35,
             iconBackground: '#282c34',
             iconBorderRadius: '50%',
             iconBorderColor: '#FF0000',
             iconBorderWidth: '2px',
             position: 'bottom-left',
             iconMargin: {
-              right: '10px',
-              bottom: '10px'
+              right: '15px',
+              bottom: '15px'
             },
             mobile: {
               iconWidth: 40,
@@ -70,8 +70,8 @@ function App() {
               iconBorderColor: '#FF0000',
               iconBorderWidth: '2px',
               iconMargin: {
-                right: '10px',
-                bottom: '10px'
+                right: '15px',
+                bottom: '15px'
               }
             }
           }
