@@ -1,7 +1,7 @@
 :root {
   --primary-color: #282c34;
   --secondary-color: #d4af37;
-  --text-color: #ffffff;
+  --text-color: #1a1a1a;
   --icon-size: 200px;
   --icon-margin: 10px;
 }
@@ -10,7 +10,7 @@
   text-align: center;
   margin: 0 auto;
   min-height: 100vh;
-  background-color: #1a1a1a;
+  background-color: #ffffff;
   color: var(--text-color);
 }
 
@@ -45,9 +45,8 @@ p {
 
 .social-links {
   display: flex;
-  flex-direction: row; /* Display icons in a row */
-  justify-content: center; /* Center the icons horizontally */
-  align-items: center; /* Center the icons vertically */
+  justify-content: center;
+  align-items: center;
   margin-top: 20px;
   padding: 0;
   list-style: none;
@@ -61,13 +60,13 @@ p {
   color: var(--text-color);
   text-decoration: none;
   display: flex;
-  flex-direction: column; /* Stack icon and caption vertically */
+  flex-direction: column;
   align-items: center;
   transition: transform 0.3s ease;
 }
 
 .social-links span {
-  display: none; /* Hide captions by default */
+  display: none;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -78,7 +77,7 @@ p {
 }
 
 .social-links a:hover span {
-  display: block; /* Show captions on hover */
+  display: block;
   opacity: 1;
 }
 

@@ -38,11 +38,9 @@ function App() {
     };
 
     const initializeChatbase = () => {
-      // Check if the script has already been loaded
       const existingScript = document.querySelector('script[src="https://www.chatbase.co/embed.min.js"]');
 
       if (!existingScript) {
-        // Script hasn't been loaded yet, so create a new one
         const script = document.createElement('script');
         script.src = "https://www.chatbase.co/embed.min.js";
         script.setAttribute('chatbotId', '_uKBoYS6yXAh9HztcRRrK');
@@ -58,26 +56,6 @@ function App() {
             iconWidth: 35,
             iconHeight: 35,
             iconBackground: '#282c34',
-            iconBorderRadius: '50%',
-            iconBorderColor: '#FF0000',
-            iconBorderWidth: '2px',
-            position: 'bottom-left',
-            iconMargin: {
-              right: '20px',
-              bottom: '20px'
-            },
-            mobile: {
-              iconWidth: 40,
-              iconHeight: 40,
-              iconBackground: '#282c34',
-              iconBorderRadius: '50%',
-              iconBorderColor: '#FF0000',
-              iconBorderWidth: '2px',
-              iconMargin: {
-                right: '20px',
-                bottom: '20px'
-              }
-            }
           }
         };
       }
@@ -88,42 +66,19 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <header className={`App-header ${isNightMode ? 'night-mode' : ''}`}>
-        <img src="/logo.png" className="App-logo" alt="logo" width="200" height="200" />
+    <div className={`App ${isNightMode ? 'night-mode' : 'day-mode'}`}>
+      <header className="App-header">
+        <img src="/logo.png" className="App-logo" alt="logo" />
         <h1>ITL Land Ventures</h1>
-        <p>Our website is currently under development. Stay connected with us through our social media channels!</p>
+        <p>
+          Our website is currently under development. Stay connected with us through our social media channels!
+        </p>
         <ul className="social-links">
-          <li>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faInstagram} size="2x" />
-              <span>Follow us on Instagram</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faFacebook} size="2x" />
-              <span>Like our Facebook page</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://wa.me" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faWhatsapp} size="2x" />
-              <span>Message us on WhatsApp</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faYoutube} size="2x" />
-              <span>Watch our YouTube videos</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faTwitter} size="2x" />
-              <span>Follow us on Twitter</span>
-            </a>
-          </li>
+          <li><a href="https://instagram.com"><FontAwesomeIcon icon={faInstagram} /><span>Follow us on Instagram</span></a></li>
+          <li><a href="https://facebook.com"><FontAwesomeIcon icon={faFacebook} /><span>Like our Facebook page</span></a></li>
+          <li><a href="https://whatsapp.com"><FontAwesomeIcon icon={faWhatsapp} /><span>Message us on WhatsApp</span></a></li>
+          <li><a href="https://youtube.com"><FontAwesomeIcon icon={faYoutube} /><span>Watch our YouTube videos</span></a></li>
+          <li><a href="https://twitter.com"><FontAwesomeIcon icon={faTwitter} /><span>Follow us on Twitter</span></a></li>
         </ul>
       </header>
     </div>
