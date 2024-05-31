@@ -9,13 +9,10 @@ function App() {
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     setIsNightMode(mediaQuery.matches);
-
     const handleChange = (e) => {
       setIsNightMode(e.matches);
     };
-
     mediaQuery.addEventListener('change', handleChange);
-
     return () => {
       mediaQuery.removeEventListener('change', handleChange);
     };
@@ -39,7 +36,6 @@ function App() {
 
     const initializeChatbase = () => {
       const existingScript = document.querySelector('script[src="https://www.chatbase.co/embed.min.js"]');
-
       if (!existingScript) {
         const script = document.createElement('script');
         script.src = "https://www.chatbase.co/embed.min.js";
@@ -48,7 +44,6 @@ function App() {
         script.setAttribute('data-namespace', 'chatbase');
         script.async = true;
         document.body.appendChild(script);
-
         window.embeddedChatbotConfig = {
           chatbotId: "_uKBoYS6yXAh9HztcRRrK",
           domain: "www.chatbase.co",
@@ -65,20 +60,58 @@ function App() {
     initializeChatbase();
   }, []);
 
+  useEffect(() => {
+    const googleTagManagerScript = document.createElement("script");
+    googleTagManagerScript.async = true;
+    googleTagManagerScript.src = "https://www.googletagmanager.com/gtag/js?id=YOUR_GOOGLE_TAG_MANAGER_ID";
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      window.dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "YOUR_GOOGLE_TAG_MANAGER_ID");
+
+    document.body.appendChild(googleTagManagerScript);
+  }, []);
+
   return (
     <div className={`App ${isNightMode ? 'night-mode' : 'day-mode'}`}>
       <header className="App-header">
         <img src="/logo.png" className="App-logo" alt="logo" />
         <h1>ITL Land Ventures</h1>
-        <p>
-          Our website is currently under development. Stay connected with us through our social media channels!
-        </p>
+        <p>Our website is currently under development. Stay connected with us through our social media channels!</p>
         <ul className="social-links">
-          <li><a href="https://instagram.com"><FontAwesomeIcon icon={faInstagram} /><span>Follow us on Instagram</span></a></li>
-          <li><a href="https://facebook.com"><FontAwesomeIcon icon={faFacebook} /><span>Like our Facebook page</span></a></li>
-          <li><a href="https://whatsapp.com"><FontAwesomeIcon icon={faWhatsapp} /><span>Message us on WhatsApp</span></a></li>
-          <li><a href="https://youtube.com"><FontAwesomeIcon icon={faYoutube} /><span>Watch our YouTube videos</span></a></li>
-          <li><a href="https://twitter.com"><FontAwesomeIcon icon={faTwitter} /><span>Follow us on Twitter</span></a></li>
+          <li>
+            <a href="https://instagram.com">
+              <FontAwesomeIcon icon={faInstagram} />
+              <span>Follow us on Instagram</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://facebook.com">
+              <FontAwesomeIcon icon={faFacebook} />
+              <span>Like our Facebook page</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://whatsapp.com">
+              <FontAwesomeIcon icon={faWhatsapp} />
+              <span>Message us on WhatsApp</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://youtube.com">
+              <FontAwesomeIcon icon={faYoutube} />
+              <span>Watch our YouTube videos</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com">
+              <FontAwesomeIcon icon={faTwitter} />
+              <span>Follow us on Twitter</span>
+            </a>
+          </li>
         </ul>
       </header>
     </div>

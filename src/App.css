@@ -1,8 +1,12 @@
 :root {
   --primary-color: #282c34;
   --secondary-color: #d4af37;
-  --text-color: #1a1a1a;
-  --icon-size: 200px;
+  --text-color: #ffffff;
+  --day-bg-color: #ffffff;
+  --day-text-color: #000000;
+  --night-bg-color: #1a1a1a;
+  --night-text-color: #ffffff;
+  --icon-size: 200px; 
   --icon-margin: 10px;
 }
 
@@ -10,8 +14,18 @@
   text-align: center;
   margin: 0 auto;
   min-height: 100vh;
-  background-color: #ffffff;
+  background-color: var(--night-bg-color);
   color: var(--text-color);
+}
+
+.day-mode {
+  background-color: var(--day-bg-color);
+  color: var(--day-text-color);
+}
+
+.night-mode {
+  background-color: var(--night-bg-color);
+  color: var(--night-text-color);
 }
 
 .App-header {
@@ -30,17 +44,12 @@
   height: var(--icon-size);
   width: auto;
   pointer-events: none;
-  opacity: 0;
   animation: fade-in 1s ease-in-out forwards;
 }
 
 @keyframes fade-in {
   0% { opacity: 0; }
   100% { opacity: 1; }
-}
-
-p {
-  margin: 1rem 0;
 }
 
 .social-links {
@@ -57,12 +66,13 @@ p {
 }
 
 .social-links a {
-  color: var(--text-color);
+  color: inherit;
   text-decoration: none;
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: transform 0.3s ease;
+  padding: 10px;
 }
 
 .social-links span {

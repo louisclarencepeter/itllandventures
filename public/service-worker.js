@@ -4,10 +4,9 @@ const urlsToCache = [
   '/index.html',
   '/manifest.json',
   '/logo.png',
+  // Adjust paths based on where Vite outputs your built files
   '/src/App.css',
   '/src/index.css',
-  '/src/App.jsx',
-  '/src/main.jsx',
 ];
 
 self.addEventListener('install', function(event) {
@@ -25,13 +24,22 @@ self.addEventListener('fetch', function(event) {
       if (response) {
         return response;
       }
-      return fetch(event.request);
+      return fetch(event.request).then(function(response) {
+        if (!response || response.status !== 200 || response.type !== 'basic') {
+          return response;
+        }
+        const responseToCache = response.clone();
+        caches.open(CACHE_NAME).then(function(cache) {
+          cache.put(event.request, responseToCache);
+        });
+        return response;
+      });
     })
   );
 });
 
 self.addEventListener('activate', function(event) {
-  var cacheWhitelist = [CACHE_NAME];
+  const cacheWhitelist = [CACHE_NAME];
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
       return Promise.all(
