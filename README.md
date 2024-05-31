@@ -10,9 +10,9 @@ ITL Land Ventures is a real estate company specializing in the sale of land. Our
 
 The following mockup shows the underdevelopment page of the ITL Land Ventures website:
 
-![iPhone 15 Pro Max]()
-![iPad Pro]()
-![MacBook Pro]()
+![iPhone 15 Pro Max](https://github.com/louisclarencepeter/itllandventures/blob/main/iPhone-15-PRO-MAX-itllandventures.com.png)
+![iPad Pro](https://github.com/louisclarencepeter/itllandventures/blob/main/iPad-PRO-11-itllandventures.com.png)
+![MacBook Pro](https://github.com/louisclarencepeter/itllandventures/blob/main/Macbook-PRO-16-2021-itllandventures.com.png)
 
 ## Features
 
