@@ -6,6 +6,14 @@ Welcome to the official website repository of ITL Land Ventures. This project is
 
 ITL Land Ventures is a real estate company specializing in the sale of land. Our website aims to provide a seamless experience for individuals and businesses looking to purchase land.
 
+## Mockup
+
+The following mockup shows the underdevelopment page of the ITL Land Ventures website:
+
+![iPhone 15 Pro Max]()
+![iPad Pro]()
+![MacBook Pro]()
+
 ## Features
 
 - **Underdevelopment Page:** Displays a logo and social media links.
