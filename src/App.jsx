@@ -83,7 +83,7 @@ function App() {
         <p>Our website is currently under development. Stay connected with us through our social media channels!</p>
         <ul className="social-links">
           <li>
-            <a href="https://instagram.com">
+            <a href="https://www.instagram.com/itllandventures/">
               <FontAwesomeIcon icon={faInstagram} />
               <span>Follow us on Instagram</span>
             </a>
