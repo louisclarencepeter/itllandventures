@@ -112,8 +112,3 @@
     margin: 20px;
   }
 }
-
-.chatbase-bubble {
-  bottom: var(--icon-margin) !important;
-  right: var(--icon-margin) !important;
-}
