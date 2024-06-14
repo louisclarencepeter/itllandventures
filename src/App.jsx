@@ -41,31 +41,31 @@ function App() {
         <p>Our website is currently under development. Stay connected with us through our social media channels!</p>
         <ul className="social-links">
           <li>
-            <a href="https://www.instagram.com/itllandventures/">
+            <a href="https://www.instagram.com/itllandventures/" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faInstagram} />
               <span>Follow us on Instagram</span>
             </a>
           </li>
           <li>
-            <a href="https://facebook.com">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faFacebook} />
               <span>Like our Facebook page</span>
             </a>
           </li>
           <li>
-            <a href="https://whatsapp.com">
+            <a href="https://wa.me/255768779517" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faWhatsapp} />
-              <span>Message us on WhatsApp</span>
+              <span>Message ITL LAND VENTURES on WhatsApp</span>
             </a>
           </li>
           <li>
-            <a href="https://youtube.com">
+            <a href="https://www.youtube.com/@itllandventures" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faYoutube} />
               <span>Watch our YouTube videos</span>
             </a>
           </li>
           <li>
-            <a href="https://twitter.com">
+            <a href="https://x.com/ITL_LANDVENTURE" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faTwitter} />
               <span>Follow us on Twitter</span>
             </a>
