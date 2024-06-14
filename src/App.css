@@ -6,7 +6,7 @@
   --day-text-color: #000000;
   --night-bg-color: #1a1a1a;
   --night-text-color: #ffffff;
-  --icon-size: 200px; 
+  --icon-size: 200px;
   --icon-margin: 10px;
 }
 
@@ -78,7 +78,8 @@
 .social-links span {
   display: none;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, font-size 0.3s ease;
+  font-size: 1em; /* Initial font size */
 }
 
 .social-links a:hover {
@@ -89,6 +90,7 @@
 .social-links a:hover span {
   display: block;
   opacity: 1;
+  font-size: 0.8em; /* Smaller font size on hover */
 }
 
 @media (max-width: 600px) {
