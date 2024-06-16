@@ -47,7 +47,7 @@ function App() {
             </a>
           </li>
           <li>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/itllandventures" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faFacebook} />
               <span>Like our Facebook page</span>
             </a>
