@@ -6,8 +6,11 @@
   --day-text-color: #000000;
   --night-bg-color: #1a1a1a;
   --night-text-color: #ffffff;
-  --icon-size: 200px;
-  --icon-margin: 10px;
+  --icon-size: 100px;
+  --icon-margin: 20px;
+  --mobile-icon-size: 60px;
+  --mobile-icon-margin: 10px;
+  --mobile-hover-text-size: 0.8em;
 }
 
 .App {
@@ -52,6 +55,13 @@
   100% { opacity: 1; }
 }
 
+.social-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .social-links {
   display: flex;
   justify-content: center;
@@ -59,10 +69,12 @@
   margin-top: 20px;
   padding: 0;
   list-style: none;
+  flex-wrap: wrap;
 }
 
 .social-links li {
   margin: var(--icon-margin);
+  position: relative;
 }
 
 .social-links a {
@@ -71,47 +83,40 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 0.3s ease;
-  padding: 10px;
-}
-
-.social-links span {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.3s ease, font-size 0.3s ease;
-  font-size: 1em; /* Initial font size */
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-links a:hover {
+  transform: scale(1.2);
   color: var(--secondary-color);
-  transform: translateY(-5px);
 }
 
-.social-links a:hover span {
-  display: block;
+.hover-text {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1em;
+  color: var(--secondary-color);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.social-links li:hover .hover-text {
   opacity: 1;
-  font-size: 0.8em; /* Smaller font size on hover */
 }
 
-@media (max-width: 600px) {
-  .App-header {
-    font-size: calc(12px + 2vmin);
-    padding: 10px;
-  }
-}
-
-@media (min-width: 1920px) {
-  .App-header {
-    font-size: calc(18px + 2vmin);
-    padding: 40px;
-  }
-
-  .social-links {
-    margin-top: 30px;
+@media screen and (max-width: 768px) {
+  .App-logo {
+    height: var(--mobile-icon-size);
   }
 
   .social-links li {
-    margin: 20px;
+    margin: var(--mobile-icon-margin);
+  }
+
+  .hover-text {
+    font-size: var(--mobile-hover-text-size);
   }
 }
-
