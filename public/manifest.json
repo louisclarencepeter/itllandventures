@@ -3,26 +3,14 @@
   "name": "ITL Land Ventures",
   "icons": [
     {
-      "src": "/maskable-icon-512.png",
-      "sizes": "512x512",
+      "src": "/logo.png",
+      "sizes": "800x800",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any"
     }
   ],
   "start_url": "/",
   "display": "standalone",
-  "theme_color": "#f5e5d5",
-  "background_color": "#ffffff",
-  "splash_pages": [
-    {
-      "src": "/splash-640x1136.png",
-      "sizes": "640x1136",
-      "type": "image/png"
-    },
-    {
-      "src": "/splash-750x1334.png",
-      "sizes": "750x1334",
-      "type": "image/png"
-    }
-  ]
+  "theme_color": "#101613",
+  "background_color": "#101613"
 }
