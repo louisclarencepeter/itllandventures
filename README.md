@@ -22,6 +22,9 @@ public/                    Static public assets and PWA metadata
 
 ## Local Development
 
+Use Node.js `20.19+`; the deployed Netlify build uses the version pinned in
+`.nvmrc`.
+
 ```bash
 npm install
 npm run dev
