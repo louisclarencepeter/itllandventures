@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ITL Land Ventures
 
-## Getting Started
+Under-construction website for ITL Land Ventures, built with React and Vite.
 
-First, run the development server:
+## What is included
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Responsive coming-soon landing page
+- Direct WhatsApp and email contact links
+- Social links for Instagram, Facebook, WhatsApp, YouTube, and X
+- Cleaned PWA metadata that points to existing assets
+- Service worker cleanup for visitors who had the old cache-first worker installed
+
+## Project Layout
+
+```text
+src/
+  components/              Page-level React components
+  data/                    Contact and social link data
+  styles/                  Global and page-specific styles
+public/                    Static public assets and PWA metadata
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Local Development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Use Node.js `20.19+`; the deployed Netlify build uses the version pinned in
+`.nvmrc`.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+npm install
+npm run dev
+```
 
-## Learn More
+## Quality Checks
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run lint
+npm run build
+npm audit
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- React 19
+- Vite 8
+- ESLint 9 flat config
+- Font Awesome brand icons
 
-## Deploy on Vercel
+## Contact
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+For enquiries, email `info@itllandventures.com` or message the team on WhatsApp:
+`https://wa.me/255768779517`.

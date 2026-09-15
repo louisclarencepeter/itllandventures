@@ -1,0 +1,16 @@
+{
+  "short_name": "ITL Land",
+  "name": "ITL Land Ventures",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "800x800",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#101613",
+  "background_color": "#101613"
+}
